@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    tools:context=".ResultActivity">
+    <TextView
+        android:id="@+id/txt_hasil_survey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Hasil Survey"
+        android:textAlignment="center"
+        android:textSize="50sp"/>
+    <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Restu, Resiko terkena covid adalah Sedang"
+        android:layout_below="@id/txt_hasil_survey"
+        android:textSize="20sp"/>
+</RelativeLayout>
