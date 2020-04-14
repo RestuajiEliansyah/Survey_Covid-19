@@ -5,12 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
+    android:background="@drawable/background_color"
     tools:context=".UserActivity">
     <EditText
         android:id="@+id/edt_nama"
         android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
         android:hint="Nama"/>
     <EditText
         android:layout_below="@id/edt_nama"
@@ -20,6 +23,8 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:maxLength="3"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
         android:hint="Umur"/>
     <Button
         android:id="@+id/btn_lanjut"
@@ -27,5 +32,6 @@
         android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/white"
         android:text="Lanjut"/>
 </RelativeLayout>
