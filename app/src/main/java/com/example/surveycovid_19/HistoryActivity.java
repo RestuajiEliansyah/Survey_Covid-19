@@ -17,12 +17,13 @@ public class HistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
         history = findViewById(R.id.txt_history);
+        setTitle("History");
         DatabaseHandler surveyHelper = new DatabaseHandler(this);
         Log.d("reading", "reading all data");
         List<Question> listQuestion=surveyHelper.findAll();
         String Text = "";
         for(Question b:listQuestion){
-            Text += "Nama : " + b.getName() + "\nUmur : " + b.getAge()+"\nHasil : "+ b.getResult()+"\n\n\n";
+            Text += "Nama : " + b.getName() + "\nUmur  : " + b.getAge()+"\nHasil   : "+ b.getResult()+"\n\n\n";
             Log.d("data", "ID :"+b.getId()+" | NAME :"+b.getName()+" | AGE:"+b.getAge()+" | RESULT:"+b.getResult());
             history.setText(Text);
         }

@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,7 +23,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         name = findViewById(R.id.edt_nama);
         age = findViewById(R.id.edt_umur);
         next.setOnClickListener(this);
-
+        setTitle("Biodata");
     }
 
     @Override
@@ -43,6 +45,24 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                     startActivity(intent);
                     finish();
                 }
+        }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        setMode(item.getItemId());
+        return super.onOptionsItemSelected(item);
+    }
+    public void setMode(int selectedMode) {
+        switch (selectedMode) {
+            case R.id.action_list:
+                Intent intent = new Intent(this,HistoryActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 }

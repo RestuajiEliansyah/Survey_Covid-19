@@ -32,13 +32,14 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
         tvResult.setText(Text);
         surveyHelper.save(new Question(name,age,result));
         history.setOnClickListener(this);
+        setTitle("Result");
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_back:
-                Intent intent = new Intent(this,HistoryActivity.class);
+                Intent intent = new Intent(this,UserActivity.class);
                 startActivity(intent);
                 finish();
         }
