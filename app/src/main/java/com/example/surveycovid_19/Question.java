@@ -3,31 +3,21 @@ package com.example.surveycovid_19;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Question implements Parcelable {
+public class Question {
     private int id;
     private String name;
-    private String age;
-
-    protected Question(Parcel in) {
-        id = in.readInt();
-        name = in.readString();
-        age = in.readString();
-        result = in.readString();
+    public Question(){}
+    public Question(String name,String age,String result){
+        this.name = name;
+        this.age = age;
+        this.result = result;
     }
-public Question(){}
-
-    public static final Creator<Question> CREATOR = new Creator<Question>() {
-        @Override
-        public Question createFromParcel(Parcel in) {
-            return new Question(in);
-        }
-
-        @Override
-        public Question[] newArray(int size) {
-            return new Question[size];
-        }
-    };
-
+    public Question(int id,String name,String age,String result){
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.result = result;
+    }
     public int getId() {
         return id;
     }
@@ -60,18 +50,7 @@ public Question(){}
         this.result = result;
     }
 
+    private String age;
     private String result;
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(id);
-        dest.writeString(name);
-        dest.writeString(age);
-        dest.writeString(result);
-    }
 }

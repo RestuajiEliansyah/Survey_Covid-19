@@ -21,6 +21,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         name = findViewById(R.id.edt_nama);
         age = findViewById(R.id.edt_umur);
         next.setOnClickListener(this);
+
     }
 
     @Override

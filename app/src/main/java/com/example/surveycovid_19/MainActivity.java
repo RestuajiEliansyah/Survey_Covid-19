@@ -53,9 +53,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else {
             if(Hasil <8 ){
-                result = "rendah";
-            }else if(Hasil > 8 && Hasil <15){
-                result = "sedang";
+                result = "Rendah";
+            }else if( Hasil <15){
+                result = "Sedang";
             }else {
                 result = "Tinggi";
             }
